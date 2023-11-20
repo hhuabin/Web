@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 800px;
+            height: 800px;
+            background-color: silver;
+            overflow: hidden;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 100px;
+            margin-left: 0px;
+            background-color: #bfa;
+            animation: test 2s 1s infinite alternate;
+        }
+
+        /*
+            动画：
+                动画和过渡类似，都可以实现一些动画效果 
+                不同的是过渡需要在某个属性发生变化时才会触发
+                动画可以自动触发
+            设置动画效果，必须先设置一个关键帧，关键帧设置了动画执行的每一个步骤
+            设置动画的执行时间：
+                animation-duration: 4s;
+            设置动画的延迟
+                animation-delay: 1s;to
+            设置动画执行的次数：
+				默认值 1
+                animation-iteration-count: 20;
+                可选值：infinite 无限执行
+            设定动画的运行方向
+                animation-direction: alternate;
+                可选值：
+                    normal: 默认值 从 from 到 to 每次都是这样
+                    reverse: 从 to 到 from 每次都是这样
+                    alternate: 重复反复执行 从 from 到 to 每次都是这样
+                    alternate-reverse: 重复反复执行 从 to 到 from 每次都是这样
+            设置动画的执行状态：
+                animation-play-state: running;
+                    running 运行
+                    paused 动画暂停
+            设置动画的填充模式
+                animation-fill-mode: none;
+                可选值：
+                    none: 默认值 动画执行完了回到最初的位置
+                    forwards: 动画执行完停止在动画停止的位置
+                    backwards: 动画延迟等待时，元素就处于开始位置（from 位置）
+                    both: 结合了 forwards 和 backwards 的特点
+            
+            简写属性：animation: ;
+                简写属性  没有次序要求 但是延迟时间要写在持续时间后面
+         */
+
+         .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+         @keyframes test {
+             /* from表示动画开始的位置 / 也可以使用0%*/
+             from {
+                margin-left: 0;
+             }
+             /* to 动画结束的位置 / 也可以使用100%*/
+             to {
+                margin-left: 700px;
+             }
+         }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

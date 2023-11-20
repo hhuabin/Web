@@ -1,0 +1,36 @@
+.center,
+#wrap .inner,
+#wrap .inner2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.center:hover,
+#wrap .inner:hover {
+  background-color: red;
+}
+#wrap {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border: 1px solid;
+  margin: 0 auto;
+  /* 
+        继承比混合的好处是， css代码没有那么多(相同的代码少) 
+        但是继承不支持变量
+        加上 all 继承包括 hover 的所有
+    */
+}
+#wrap .inner {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
+#wrap .inner2 {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+}

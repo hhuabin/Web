@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            position: relative;
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            margin: auto;
+
+            /*
+                水平布局：
+                    left + margin-left + borderleft + padding-left + content + ... 
+                    水平方向添加了left和right两个值
+                        当发生过度条约时，width最大化标准
+                    垂直方向添加了top和bottom两个值
+                        居中
+             */
+
+            left: 0;
+            right: 0;
+
+            top: 0;
+            bottom: 0;
+            /* 必须要写 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

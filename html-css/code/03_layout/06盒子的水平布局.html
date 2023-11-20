@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 800px;
+            height: 200px;
+            border: 10px red solid;
+        }
+
+        .inner{
+            width: 1000px;
+            height: 200px;
+            background-color: #bfa;
+            margin-left: auto;
+            margin-right: auto;
+            /*
+                元素的水平方向布局:
+                    元素在父元素中水平方向位置由一下几个属性共同决定
+                        margin-left
+                        border-left
+                        padding-left
+                        width
+                        padding-right
+                        border-right
+                        margin-right
+                    以上所有数值加起来 == 父元素的内容区的宽度(必须满足 )
+                        如果不等于则称为过度条约，等式自动调整
+                        调整情况：
+                            如果这七个值中没有auto的情况。则浏览器会自动调整margin-right的值以使等式满足
+                        这七个值中有三个值可以设置成auto
+                            width
+                            margin-left
+                            margin-right
+                            如果某个值为auto则会自动调整auto那个值使等式成立
+                            优先级: width > margin-left = margin-right
+                            (居中处理)
+                                width:xxxpx;
+                                margin:0 auto;
+                            width最大化处理，如果只有两个auto，width最大化，margin设置为0
+
+             */
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

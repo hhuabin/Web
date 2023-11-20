@@ -1,0 +1,192 @@
+<template>
+	<div class="editinfo">
+		<PageHeader :routes="routes"></PageHeader>
+		<a-card :bordered="false">
+			<div class="card-content">
+				<div class="item-title">
+					<div class="title-head"></div>
+					<div class="title">员工信息</div>
+				</div>
+				<div class="item-content">
+					<div class="icontent-left">
+						员工姓名
+						<!-- <span class="required">*</span> -->
+					</div>
+					<div class="icontent-right">
+						<a-input
+						 style="width: 250px;"
+						 v-model:value="value"
+						 placeholder="请输入"
+						/>
+					</div>
+				</div>
+				<div class="item-content">
+					<div class="icontent-left">
+						手机号
+					</div>
+					<div class="icontent-right">
+						<a-input
+						 style="width: 250px;"
+						 v-model:value="value"
+						 placeholder="请输入"
+						/>
+					</div>
+				</div>
+				<div class="item-content">
+					<div class="icontent-left">部门</div>
+					<div class="icontent-right">
+						<a-select
+							v-model:value="provideType"
+							placeholder="请选择"
+							style="minWidth: 250px"
+							:options="provideTypeOptions"
+						></a-select>
+					</div>
+				</div>
+				<div class="item-content">
+					<div class="icontent-left">岗位</div>
+					<div class="icontent-right">
+						<a-select
+							v-model:value="provideType"
+							placeholder="请选择"
+							style="minWidth: 250px"
+							:options="provideTypeOptions"
+						></a-select>
+					</div>
+				</div>
+				<div class="item-content">
+					<div class="icontent-left">职务</div>
+					<div class="icontent-right">
+						<a-input
+						 style="width: 250px;"
+						 v-model:value="value"
+						 placeholder="请输入"
+						/>
+					</div>
+				</div>
+				<div class="item-content">
+					<div class="icontent-left">类型</div>
+					<div class="icontent-right">
+						<a-select
+							v-model:value="provideType"
+							placeholder="请选择"
+							style="minWidth: 250px"
+							:options="provideTypeOptions"
+						></a-select>
+						<!-- <div class="tips">提示：此选项可用于分类员工福利发放数量</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="button-list">
+				<a-space :size="100">
+					<a-button type="primary" style="width: 88px">确定</a-button>
+					<a-button style="width: 88px">取消</a-button>
+				</a-space>
+			</div>
+		</a-card>
+	</div>
+</template>
+
+<script>
+import { defineComponent, ref } from 'vue'
+import { Card, Input, Select, Space, Button } from 'ant-design-vue'
+import PageHeader from '@/components/PageHeader/PageHeader.vue'
+
+const routes = [
+	{
+		path: '/manage/staffman',
+		breadcrumbName: '企业管理',
+	},
+	{
+		path: 'index',
+		breadcrumbName: '员工管理',
+	},
+	{
+		path: 'editstaff',
+		breadcrumbName: '编辑员工信息',
+	},
+];
+export default defineComponent({
+	name: 'EditStaff',
+	components: {
+		[Card.name]: Card,
+		[Input.name]: Input,
+		[Select.name]: Select,
+		[Space.name]: Space,
+		[Button.name]: Button,
+		PageHeader,
+	},
+	setup() {
+		const value = ref('');
+
+		return {
+			routes,
+			value
+		}
+	}
+});
+</script>
+
+<style lang='less' scoped>
+.editinfo {
+	width: 100%;
+	min-height: 100%;
+	background-color: #fff;
+
+	.card-content {
+		width: 100%;
+		padding: 16px 24px;
+		box-sizing: border-box;
+
+		.item-title {
+			display: flex;
+			align-items: center;
+			
+			.title-head {
+				width: 5px;
+				height: 20px;
+				border-radius: 2px;
+				margin-right: 10px;
+				background-color: #1890ff;
+			}
+			.title {
+				color: #333;
+				font-size: 18px;
+				line-height: 28px;
+				font-weight: 600;
+			}
+		}
+		.item-content {
+			display: flex;
+			width: 100%;
+			min-height: 32px;
+			margin-top: 30px;
+			color: rgba(0, 0, 0, 0.85);
+			font-size: 16px;
+			line-height: 32px;
+			
+			.icontent-left {
+				width: 100px;
+				margin-right: 20px;
+				.required {
+					color: red;
+				}
+			}
+			.icontent-right {
+				.tips {
+					margin-top: 10px;
+					color: #7f7f7f;
+					font-size: 12px;
+					line-height: 16px;
+				}
+			}
+		}
+	}
+
+	.button-list{
+		padding: 0 24px;
+		box-sizing: border-box;
+		margin-top: 70px;
+	}
+}
+</style>

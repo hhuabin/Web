@@ -1,0 +1,33 @@
+// less的单行注释 单行注释不会被解析到css中
+/* 多行注释会被解析到css中 */
+
+.box1 {
+    width: @a;
+    height: $width;
+    background-color: @b;
+
+    .box2 {
+        background-color: #bfa;
+        .box4 {
+            background-color: #bfa;
+        }
+    }
+
+    .box3 {
+        background-color: #bfa;
+    }
+}
+
+// 变量，在变量中可以存储一个任意值
+// 并且我们可以在需要时修改任意变量的值
+// 变量的语法  @变量名: ;
+
+@a: 200px;
+@b: #bfa;
+@c: box6;
+
+// 作为类名使用时，或者一部分值使用时必须以 @{变量名} 的形式使用
+.@{c} {
+    width: @a;
+    background-image: url("@{c}/1pang");
+}

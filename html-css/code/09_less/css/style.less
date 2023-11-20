@@ -1,0 +1,27 @@
+html {
+    --color: orange;
+    --length: 200px;
+
+    div {
+        width: calc(1000px/5);
+        height: var(--length);
+        background-color: var(--color);
+    }
+}
+
+.box1 {
+    /* calc() 计算函数 */
+    width: calc(1000px/5);
+    height: var(--length);
+    background-color: var(--color);
+}
+.box2 {
+    width: var(--length);
+    height: var(--length);
+    color: var(--color);
+}
+.box3 {
+    width: var(--length);
+    height: var(--length);
+    background-color: var(--color);
+}

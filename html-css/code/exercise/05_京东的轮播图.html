@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+
+    <style>
+        .img-list{
+            width: 590px;
+            height: 460px;
+            margin-top: 300px;
+            margin-left: 400px;
+            position: relative;
+
+        }
+
+        .img-list li{
+            position: absolute;
+        }
+
+        .pointer{
+            position: absolute;
+            left: 10px;
+            bottom: 15px;
+            z-index: 999;
+        }
+
+        .pointer a{
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 50%;
+            margin-left: 5px;
+            /* 将背景颜色设置到内容区 */
+            background-clip: content-box;
+            border: 3px solid transparent;
+        }
+
+        .pointer a:hover,
+        .pointer a:active{
+            background-color: white;
+            border: 3px solid rgba(255, 255, 255, .3);
+        }
+    </style>
+</head>
+<body>
+    <ul class="img-list">
+        <li><a href="https://bilibili.com"><img src="./pictures/jd1.jpg"></a></li>
+        <li><a href="https://bilibili.com"><img src="./pictures/jd2.webp"></a></li>
+        <li><a href="https://bilibili.com"><img src="./pictures/jd3.webp"></a></li>
+        <li><a href="https://bilibili.com"><img src="./pictures/jd5.webp"></a></li>
+        <li><a href="https://bilibili.com"><img src="./pictures/jd4.webp"></a></li>
+
+        <div class="pointer">
+            <a class="active" href="javascript;;"></a>
+            <a href="javascript;;"></a>
+            <a href="javascript;;"></a>
+            <a href="javascript;;"></a>
+            <a href="javascript;;"></a>
+        </div>
+    </ul>
+</html>

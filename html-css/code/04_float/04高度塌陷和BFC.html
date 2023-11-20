@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .outer{
+
+            border: 10px red solid;
+
+            /*
+                BFC(block formatting context) 块级格式化环境
+                    开启BFC后，元素变成一个独立的布局区域
+                        开启BFC的元素不会被浮动元素所覆盖
+                        开启BFC的元素子元素和父元素的外边距不会重叠
+                        开启BFC的元素可以包含浮动的子元素
+
+                开启BFC
+                    1.将元素设置为浮动元素
+                    2.将元素设置为行内块元素
+                    3.开启overflow(overflow hidden)
+             */
+
+            overflow: hidden;
+        }
+
+        .inner{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+
+        .out{
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <div class="out">
+        <div class="box1"></div>
+    </div>
+    
+</body>
+</html>

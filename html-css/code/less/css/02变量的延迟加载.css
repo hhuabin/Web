@@ -1,0 +1,7 @@
+.class {
+  padding: 1 px;
+}
+.class .brass {
+  /* 会等到 当前作用域 的变量变化结束后再加载 */
+  padding: 3 px;
+}

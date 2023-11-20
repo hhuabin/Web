@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock {
+            width: 500px;
+            height: 500px;
+            border: 10px solid black;
+            margin: 100px auto;
+            border-radius: 50%;
+            position: relative;
+        }
+        .clock > div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        /* 时针 */
+        .hour-wrapper {
+            width: 60%;
+            height: 60%;
+            animation: run 216000s infinite linear;
+        }
+        .hour-top {
+            width: 0;
+            border: 3px solid ;
+            border-color: transparent transparent black transparent;
+            margin: 0 auto;
+        }
+        .hour {
+            width: 6px;
+            height: 144px;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        /* 分针 */
+        .min-wrapper {
+            width: 80%;
+            height: 80%;
+            animation: run 3600s infinite linear;
+        }
+        .min-top {
+            width: 0;
+            border: 2px solid ;
+            border-color: transparent transparent black transparent;
+            margin: 0 auto;
+        }
+        .min {
+            width: 4px;
+            height: 196px;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        /* 秒针 */
+        .s-wrapper {
+            width: 90%;
+            height: 90%;
+            animation: run 60s infinite linear;
+        }
+        .s-top {
+            width: 0;
+            border: 1px solid ;
+            border-color: transparent transparent red transparent;
+            margin: 0 auto;
+        }
+        .s {
+            width: 2px;
+            height: 223px;
+            background-color: red;
+            margin: 0 auto;
+        }
+        /* 中心圆点 */
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        @keyframes run {
+            from {
+                transform: rotateZ(0);
+            }
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="hour-wrapper">
+            <div class="hour-top"></div>
+            <div class="hour"></div>
+        </div>
+
+        <div class="min-wrapper">
+            <div class="min-top"></div>
+            <div class="min"></div>
+        </div>
+
+        <div class="s-wrapper">
+            <div class="s-top"></div>
+            <div class="s"></div>
+        </div>
+        <div class="dot"></div>
+    </div>
+</body>
+</html>

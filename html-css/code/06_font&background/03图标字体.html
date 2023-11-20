@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="../../../iconfont/Alibaba ordinary/iconfont.css">
+
+    <style>
+        i{
+            width: 100px;
+            height: 100px;
+            background-color: orchid;
+            color: brown;
+        }
+        p {
+            width: 100px;
+            height: 100px;
+            background-color: silver;
+        }
+        p::before{
+            content: '\e664';
+            font-family: 'iconfont';
+            /* 只能设置一次字体颜色 */
+            color: brown;
+        }
+        p:hover,
+        i:hover {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        图标字体(iconfont)
+            
+     -->
+    <i class="iconfont">&#xe664;</i>
+    <i class="iconfont icon-add"></i>
+     <p>hello</p>
+</body>
+</html>

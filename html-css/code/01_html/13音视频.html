@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        audio 标签用来向页面中引入一个外部的音频文件
+            音视频文件引入时，默认情况下不允许用户自己播放控制
+        属性：
+            controls 是否允许用户控制播放
+            autoplay 音频文件是否自动播放
+                如果设置了自动播放 则音乐打开页面时会自动播放
+                    但目前来讲大部分浏览器不会自动对音乐进行自动播放
+            loop 音乐是否循环播放
+     -->
+    
+    <!-- <audio src="./source/情动.mp3" controls>情动</audio> -->
+    <!-- <audio src="./source/情动.mp3" controls autoplay loop>情动</audio> -->
+    <!-- 
+        除了通过src来指定外部文件路径以外，还可以通过source来指定
+     -->
+    <audio controls>
+        <!-- 对不起，您的浏览器不支持播放音频，请升级浏览器 -->
+        <!-- <source src="./source/情动.mp3"> -->
+        <source src="./source/彩虹.mp3">
+        <source src="./source/彩虹.ogg">
+        <embed src="./source/彩虹.mp3" type="audio/mp3" width="300" height="50"> 
+        <!-- 查看浏览器支持哪款音频格式，如果支持mp3就直接播放MP3 -->
+    </audio>
+    <!-- 
+        embed 老版本的播放标签
+            缺点：会自动播放
+            type 文件类型
+     -->
+    <!-- <embed src="./source/彩虹.mp3" type="" width="300" height="50"> -->
+    <!-- 
+        使用video标签向网页中引入一个视频
+        使用方法和audio基本一样
+     -->
+    <!-- <video src=""></video> -->
+    <video controls>
+        <source src="">
+        <embed src="" type="video/mp4">
+    </video>
+
+    <iframe src="//player.bilibili.com/player.html?aid=499799224&bvid=BV1cK411N7PU&cid=240251633&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="500" height="400"> </iframe>
+</body>
+</html>

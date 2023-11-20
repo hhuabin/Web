@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+
+    <style>
+        body {
+            background-color: #bfa;
+        }
+        a{
+            text-decoration: none;
+        }
+        .news-list {
+            width: 260px;
+            height: 270px;
+            background-color: white;
+            padding-right: 5px;
+            border-top: 1px #ddd solid;
+            margin-top: 5px;
+        }
+
+        .news-title {
+            display: inline-block;
+            height: 20px;
+            border-top: 1px red solid;
+            margin-top: 1px;
+            
+        }
+        .news-title a {
+            color: #333333;
+        }
+
+        .news-img {
+            height: 150px;
+        }
+
+        .news-list img {
+            width: 100%;
+        }
+        .img-title{
+            height: 20px;
+            margin-top: -25px;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        .news-list h3{
+            color: white;
+            font-size: 12px;
+        }
+
+        .news-li{
+             margin-top: 13px;
+             padding-left: 14px;
+         }
+
+        .news-list li a {
+            color: #333333;
+            font-size: 12px;
+        }
+
+        .news-li li::before{
+            content: '';
+        }
+
+        .news-list li a:hover{
+            color: red;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="news-list">
+
+        <h2 class="news-title">
+            <a href="#">体育</a>
+        </h2>
+
+        <div class="news-img">
+            <a href="#">
+                <img src="./pictures/wy.webp" alt="">
+                <h3 class="img-title"> 
+                    法网哈勒普遭新星爆冷 无缘八强
+                </h3>
+            </a>
+        <ul>
+            <li class="news-li">
+                <a href="#">胡明轩：学联哥当顶梁柱 尊重非害怕杜指导</a>
+            </li>
+
+            <li class="news-li">
+                <a href="#">胡明轩：学联哥当顶梁柱 尊重非害怕杜指导</a>
+            </li>
+
+            <li class="news-li">
+                <a href="#">胡明轩：学联哥当顶梁柱 尊重非害怕杜指导</a>
+            </li>
+
+            <li class="news-li"> 
+                <a href="#">胡明轩：学联哥当顶梁柱 尊重非害怕杜指导</a>
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>

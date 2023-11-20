@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        表单：
+            - 在现实生活中用于提交数据
+            - 在网页中的表单用于将数据提交给远程的服务器
+            - 使用form 标签来创建表单
+     -->
+     <form action="target.html">
+         <!-- 
+             文本框
+          -->
+          账号: <input type="text" name="username">
+          <br>
+          密码: <input type="password" name="password">
+          <br><br>
+           <!-- 
+               单选按钮
+               name值必须一样
+               通过value辨别是哪个按钮
+               checked 默认选择按钮
+             -->
+           单选框: <input type="radio" name="hello" value="123">
+           <input type="radio" name="hello" value="456" checked>
+           <!-- 
+               多选框
+            -->
+            <br>
+            多选框: <input type="checkbox" name="text" value="1" checked>
+            <input type="checkbox" name="text" value="2">
+            <input type="checkbox" name="text" value="3">
+
+            <!-- 
+                下拉按钮
+                selected 默认选项
+             -->
+             <br>
+             <select name="haha" id="">
+                 <option value="i">选项一</option>
+                 <option selected value="li">选项二</option>
+                 <option value="lii">选项三</option>
+             </select>
+            <!-- 
+              提交按钮
+           -->
+           <br>
+           <input type="submit" value="注册">
+        </form>
+
+</body>
+</html>

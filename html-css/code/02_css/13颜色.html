@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            /*
+                 颜色单位
+                    在css中可以直接使用颜色名来设置各种颜色
+                        比如：red green blue
+                        但在css中使用非常不方便
+                    RGB值：
+                        red green blue
+                        调RGB值
+                        每一种颜色在0-255之间
+                    
+                    RGBA:
+                        在RGB的基础上增加a来表示透明度
+                        1表示完全不透明，0.5表示半透明，0表示完全透明
+
+                    十六进制表示RGB值：
+                        语法： #红色绿色蓝色
+                        00-ff
+                        如果颜色重复可以简写
+                        如#aabbcc = #abc
+             */
+            background-color: red;
+            background-color: rgb(227,120,48);
+            background-color: rgba(227,120,48,0.5);
+            background-color: #ffff00;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

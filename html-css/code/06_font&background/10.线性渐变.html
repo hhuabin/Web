@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(135deg,red 10px,yellow,silver,green,white 250px);
+            /*
+                渐变可以设置一些比较复杂的颜色，可以实现一些颜色的过度效果
+                渐变是图片，可以通过background-image来设置
+                    线性渐变
+                        linear-gradient
+                            to left
+                            to bottom
+                            xxxdeg  表示度数
+                            turn 表示圈
+                        多个颜色默认情况下平均分布
+             */
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-image: repeating-linear-gradient(135deg , green 0px , white 50px);
+
+            /*
+                 repeating-linear-gradient
+                    重复
+             */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+</body>
+</html>

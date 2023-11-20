@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 2000px;
+            height: 1500px;
+            background-color: #bfa;
+            border: 10px double red;
+
+            /*
+                background-image 设置背景图片
+                    - 如果背景图片大于元素，会有一部分图片无法显示
+                    - 如果背景图片小于元素，背景图片会在背景中平铺
+             */
+            background-image: url(../pictures/01.jpg);
+            background-repeat: no-repeat;
+
+            /*
+                background-repeat  用来设置背景的重复方式给
+                    -  repeat 默认值，背景图片会沿着x轴y轴重复
+
+             */
+            
+            background-position:  0 0;
+            /*
+                 background-position 用来设置背景图片的位置
+                    - top left right bottom center 5个可选值
+                通过偏移量来设置背景图片的位置
+             */
+            background-origin: border-box;
+            background-clip: border-box;
+            /*
+                background-clip 设置背景范围
+                    可选值
+                        - border-box 默认值 背景会出现在边框的下边
+                        - padding-box 背景不会出现在在边框上
+                        - content-box 背景只出现内容区
+                    background-origin 背景图片偏移量计算原点
+                        - padding-box 默认值。背景会从内边距开始计算
+                        - content-box 背景图片从内容区计算
+                        - border-box 背景图片从边框开始计算
+             */
+            
+            background-size: 480px auto;
+            /*
+                background-size 设置图片的大小 
+                    - 第一个元素是宽，第二个元素是高度
+                    - cover 图片比例不变，将元素铺满
+                    - contain 图片比例不变，在元素中完整显示
+             */
+             background-attachment: fixed;
+             /* 
+                background-attachment
+                    - scroll 默认值，图片会跟着元素一起滚动
+                    - fixed 背景固定在页面中不会和元素一起滚动
+              */
+
+        /*
+            总结：backgbround
+                - background-size必须写在background-position后边，并且使用/隔开
+                    background-position/background-size
+                - background-clip必须写在background-origin后边，并且使用/隔开
+                    background-origin/background-clip
+         */
+        }   
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

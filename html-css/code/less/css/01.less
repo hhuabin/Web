@@ -1,0 +1,38 @@
+/* css能看到的注释 */
+// css看不到的注释
+
+// 声明变量
+@color: pink;
+// 命名选择器和属性名 使用的时候要加 {}
+@m: margin;
+@select: #wrap;
+
+
+*{
+    @{m}: 0;
+    padding: 0;
+}
+@{select}{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid;
+    margin: 0 auto;
+    .inner{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        // 使用变量
+        background: @color;
+        height: 100px;
+        width: 100px;
+        
+        &:hover {
+            /* 基本的嵌套规则，与 .inner同级 要写 & */
+            background-color: black;
+        }
+    }
+}

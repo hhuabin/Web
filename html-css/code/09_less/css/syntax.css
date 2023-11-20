@@ -1,0 +1,19 @@
+/* 多行注释会被解析到css中 */
+.box1 {
+  width: 200px;
+  height: 200px;
+  background-color: #bfa;
+}
+.box1 .box2 {
+  background-color: #bfa;
+}
+.box1 .box2 .box4 {
+  background-color: #bfa;
+}
+.box1 .box3 {
+  background-color: #bfa;
+}
+.box6 {
+  width: 200px;
+  background-image: url("box6/1pang");
+}

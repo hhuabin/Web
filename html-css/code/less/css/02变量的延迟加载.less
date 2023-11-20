@@ -1,0 +1,11 @@
+@var: 0;
+.class {
+    @var: 1;
+    .brass {
+        @var: 2;
+        /* 会等到当前作用域的变量变化结束后再加载 */
+        padding: @var px;
+        @var: 3;
+    }
+    padding: @var px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* html {
+            设置当前网页的视距为800px 人眼距离网页的距离
+            perspective: 800px;
+        } */
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            margin: 0 auto;
+            margin-top: 100px;
+            transform: translateX(50%);
+
+            /* 
+                变形是指通过CSS改变元素的形状和位置
+                - 变形不会影响页面的布局
+                transform: ; 用来设置元素的变形效果
+                    - 平移
+                        translateX() 沿着X轴平移
+                        translateY() 沿着Y轴平移
+                        translateZ() 沿着Z轴平移
+
+             */
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: 0 auto;
+        }
+        .box3 {
+            background-color: pink;
+            position: absolute;
+            /* top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto; */
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        body:hover .box1 {
+            transform: translateX(50%) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <!-- <div class="box2"></div> -->
+    <!-- 居中效果 -->
+    <div class="box3">aaa</div>
+</body>
+</html>

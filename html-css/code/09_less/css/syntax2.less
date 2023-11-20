@@ -1,0 +1,64 @@
+.box1 {
+    .box2 {
+        color: red;
+    }
+    >.box3 {
+        color: red;
+    }
+
+    // 为box1设置一个hover
+    // & 表示外层的父元素
+    &:hover {
+        color: orange;
+    }
+}
+
+.p1 {
+    width: 200px;
+    height: 200px;
+}
+// extend(): 对当前选择器的扩展指定选择器的样式(选择器分组)
+.p2:extend(.p1) {
+    color: red;
+}
+
+.p3 {
+    // 直接对指定样式进行引用，这里就相当于复制了 p1 (代码量太长，不建议使用)
+    .p1();
+}
+// 使用类选择器时在后面添加一个 () 相当于创建了一个供给使用的 混合函数
+.p4() {
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+}
+
+.p5 {
+    .p4();
+}
+
+// 混合函数
+.test(@w: 100px, @h) {
+    width: @w;
+    height: @h;
+}
+div {
+    // .test(200px, 300px);
+    .test(@h:200px);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: orangered;
+}
+
+// darken函数  颜色加深
+body:hover {
+    background-color: darken(orangered, 10%);
+}

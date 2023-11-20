@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            user-select: none;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul {
+            width: 800px;
+            height: 800px;
+            border: 5px solid red;
+            display: flex;
+            
+            /* flex-wrap: wrap-reverse; */
+            /* 
+                flex-wrap: 设置元素是否自动换行
+                    - nowrap 默认值，不换行
+                    - wrap 元素沿着辅轴自动换行
+                    - wrap-reverse 元素沿着辅轴反方向自动换行
+             */
+            
+             flex-flow: row nowrap;
+             /* 
+                flex-flow: 简写属性
+
+              */
+
+            justify-content: center;
+            /* 
+                justify-content: 如何分配 主轴 上的空白空间
+                    - 可选值
+                    - flex-start 元素沿着主轴起边排列
+                    - flex-end 元素沿着主轴终边排列
+                    - center 元素居中排列
+                    - space-around 空白分布到元素两侧
+                    - space-evenly 空白分布到元素单侧
+                    - space-between 空白分布到元素间
+
+             */
+
+             align-items: center;
+             /* 
+                align-items 元素在 辅轴 上如何让对齐
+                    - stretch 默认值，将元素长度设置为可选值
+                    - flex-start 元素不会拉伸，沿着辅轴起边对齐
+                    - flex-end 元素不会拉伸，沿着辅轴终边对齐
+                    - center 居中对齐
+                    - baseline 基线对齐
+              */
+
+              align-content: space-evenly;
+              /* 
+                align-content 辅轴空白空间分布
+               */
+        }
+        li {
+            width: 200px;
+            background-color: #bfa;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            flex-shrink: 0;
+        }
+        li:nth-child(1) {
+            align-self: flex-start;
+        }
+        li:nth-child(2) {
+            background-color: pink;
+        }
+        li:nth-child(3) {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        flex (弹性盒)
+            - css3 中的一种布局手段，它主要说的用来代替浮动完成页面布局
+            - flex 可以使元素具有弹性，让元素可以根据页面的大小改变而改变
+            - 弹性容器
+                - 要使用弹性盒子，必须先将一个元素设置为样新容器
+                - 我们通过display 来设置弹性容器
+                    display: flex; 设置为块级弹性容器
+                    display: inline-flex 设置为行内的弹性容器
+
+            - 弹性元素
+                - 弹性容器的子元素是弹性元素(弹性项)
+                - 一个元素可以同时是弹性容器和弹性元素
+     -->
+     <ul>
+         <li>1</li>
+         <li>2
+             <div>2</div>
+         </li>
+         <li>3
+             <div>3</div>
+             <div>3</div>
+         </li>
+     </ul>
+</body>
+</html>

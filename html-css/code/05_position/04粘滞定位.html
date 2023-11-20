@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+
+    <style>
+        body{
+            height: 3000px;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .box{
+            width: 1210px;
+            height: 50px;
+            background-color: rgb(231,231,226);
+            margin:100px auto;
+            position: sticky;
+            top: 0px;
+
+            /* 
+                粘滞定位(sticky)：
+                    粘滞定位和相对定位特点基本一致
+                        不同的是粘滞定位可以在元素到达某个位置时将其固定
+             */
+        }
+        .box li{
+            line-height: 50px;
+            float: left;
+
+        }
+        
+        .box a{
+            padding: 0 39px;
+            font-size: 18px;
+            color: rgb(119,119,119);
+            display: block;
+        }
+        .box li:last-child a{
+            padding-left: 42px;
+            padding-right: 41px;
+        }
+        .box a:hover{
+            background-color: rgb(63,63,63);
+            color: rgb(232,231,227);
+        }        
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li>
+            <a href="https://www.bilibili.com/">
+                HTML/CSS
+            </a>
+        </li>
+
+
+        <li>
+            <a href="https://www.bilibili.com/">
+                Browser Side
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bilibili.com/">
+                Sever Side
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bilibili.com/">
+                Program ming
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bilibili.com/">
+                XML
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bilibili.com/">
+                Web Building
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bilibili.com/">
+                Reference
+            </a>
+        </li>
+
+    </ul>
+    
+</body>
+</html>

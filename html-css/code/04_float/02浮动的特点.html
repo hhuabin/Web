@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+
+        }
+
+        .box2{
+            background-color: yellow;
+            float: left;
+
+            /*
+                脱离文档流的特点：
+                    块元素：
+                        脱离文档流后元素的宽高会被内容撑开
+                    行内元素：
+                        脱离文档流后会变成块元素。
+
+                脱离文档流后不需要再区分块元素和行内元素
+             */
+        }
+        .box3{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2">hello</div>
+    <div class="box3">hello</div>
+</body>
+</html>
